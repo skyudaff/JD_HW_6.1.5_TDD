@@ -28,6 +28,9 @@ public class PhoneBook {
     }
 
     String findByNumber(String number) {
-        return null;
+        return phoneBook.keySet()
+                .stream()
+                .filter(key -> number.equals(phoneBook.get(key)))
+                .findFirst().orElse("Контакт c номером: " + number + " не найден");
     }
 }
