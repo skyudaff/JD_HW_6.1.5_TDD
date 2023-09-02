@@ -1,8 +1,6 @@
 package org.example;
 
 import org.hamcrest.Matchers;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -25,17 +23,7 @@ public class PhoneBookTest {
 
     @BeforeEach
     void bE() {
-        sut = new PhoneBook();
-    }
-
-    @BeforeAll
-    static void start() {
-        System.out.println("Начало тестов");
-    }
-
-    @AfterAll
-    static void finish() {
-        System.out.println("Конец тестов");
+        sut =  PhoneBook.getInstance();
     }
 
     @ParameterizedTest
