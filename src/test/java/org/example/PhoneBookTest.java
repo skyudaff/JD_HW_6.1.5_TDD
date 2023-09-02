@@ -60,6 +60,6 @@ public class PhoneBookTest {
         String result = sut.findByName("Ivan");
 
         //assert
-        assertThat(result, Matchers.equalTo("123345"));
+        assertThat(result, Matchers.equalTo("12345"));
     }
 }

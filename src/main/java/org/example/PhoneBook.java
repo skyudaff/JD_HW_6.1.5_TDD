@@ -35,6 +35,6 @@ public class PhoneBook {
     }
 
     String findByName(String name) {
-        return null;
+        return phoneBook.getOrDefault(name, "Контакт с именем \"" + name + "\" не найден");
     }
 }
