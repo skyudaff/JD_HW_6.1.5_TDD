@@ -48,6 +48,18 @@ public class PhoneBookTest {
 
         //assert
         assertThat(result, Matchers.equalTo("Petr"));
+    }
 
+    @Test
+    void testFindByName() {
+        //arrange
+        sut.add("Ivan", "12345");
+        sut.add("Petr", "11111");
+
+        //act
+        String result = sut.findByName("Ivan");
+
+        //assert
+        assertThat(result, Matchers.equalTo("123345"));
     }
 }

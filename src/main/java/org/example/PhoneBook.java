@@ -33,4 +33,8 @@ public class PhoneBook {
                 .filter(key -> number.equals(phoneBook.get(key)))
                 .findFirst().orElse("Контакт c номером: " + number + " не найден");
     }
+
+    String findByName(String name) {
+        return null;
+    }
 }
