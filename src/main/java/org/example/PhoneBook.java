@@ -6,7 +6,9 @@ import java.util.TreeMap;
 public class PhoneBook {
     public static PhoneBook instance = null;
     private Map<String, String> phoneBook = new TreeMap<>();
-    private PhoneBook() {}
+
+    private PhoneBook() {
+    }
 
     public static PhoneBook getInstance() {
         if (instance == null) {
@@ -23,5 +25,9 @@ public class PhoneBook {
             System.out.println("Контакт с именем \"" + name + "\" уже существует");
         }
         return phoneBook.size();
+    }
+
+    String findByNumber(String number) {
+        return null;
     }
 }
