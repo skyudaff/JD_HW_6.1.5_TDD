@@ -38,5 +38,9 @@ public class PhoneBook {
         return phoneBook.getOrDefault(name, "Контакт с именем \"" + name + "\" не найден");
     }
 
-    void printAllNames() {}
+    void printAllNames() {
+        for (String name : phoneBook.keySet()) {
+            System.out.println(name);
+        }
+    }
 }
